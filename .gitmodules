@@ -1,0 +1,6 @@
+[submodule "PlatformController"]
+	path = PlatformController
+	url = https://github.com/MacAndKaj/PlatformController
+[submodule "MoturHeadPlatform"]
+	path = MoturHeadPlatform
+	url = https://github.com/MacAndKaj/MoturHeadPlatform
