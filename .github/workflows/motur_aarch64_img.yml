@@ -20,7 +20,7 @@ jobs:
           arch: aarch64
           distro: ubuntu_latest
           githubToken: ${{ github.token }}
-          install:
+          install: |
               apt-get update -q -y
               apt-get install -q -y git
           run: ./build_rel_image.sh
