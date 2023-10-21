@@ -1,4 +1,4 @@
-name: Build Motur application image
+name: Motur application image
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: uraimo/run-on-arch-action@v2
-    - name: Build the Motur Docker image
+      name: Build the Motur Docker image
       with:
           arch: aarch64
           distro: ubuntu_latest
