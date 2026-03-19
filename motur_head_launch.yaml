@@ -1,0 +1,27 @@
+launch:
+
+- arg:
+    name: "pc_transport_device_name"
+    default: "/dev/spidev0.0"
+- arg:
+    name: "pc_gpio_device_name"
+    default: "chip0"
+- arg:
+    name: "pc_serial_device_name"
+    default: "/dev/ttyS0"
+
+- node:
+    pkg: "platform_controller"
+    exec: "platform_controller_node"
+    name: "platform_controller"
+    namespace: "motur"
+    param:
+    -
+      name: "transport_device_name"
+      value: "$(var pc_transport_device_name)"
+    -
+      name: "gpio_device_name"
+      value: "$(var pc_gpio_device_name)"
+    -
+      name: "serial_device_name"
+      value: "$(var pc_serial_device_name)"

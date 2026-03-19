@@ -14,6 +14,9 @@ function usage ()
 #while getopts ""; do
 #
 #done
+if [ -f "./${DOCKER_TAG}.tar.gz" ]; then
+    rm ./${DOCKER_TAG}.tar.gz
+fi
 
 
 DOCKER_TAG="motur_rel_image"
